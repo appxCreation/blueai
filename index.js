@@ -25,8 +25,8 @@ function checkAppKey(req) {
 
 app.post('/generate-narrative', async (req, res) => {
   try {
-    if (!checkAppKey(req)) return res.status(401).json({ error: 'Unauthorized' });
-
+   
+if (!checkAppKey(req)) return res.status(401).json({ error: 'Unauthorized' });
     const { incident } = req.body;
     if (!incident) return res.status(400).json({ error: 'Missing `incident` in body' });
 
